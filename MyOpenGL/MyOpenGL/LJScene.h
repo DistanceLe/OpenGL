@@ -17,3 +17,12 @@
 
 void Init();
 void Draw();
+
+void DrawStrip();
+void DrawFna();
+void DrawPoint();
+void DrawLine();
+
+void PushAndPop();
+
+void EnableLighting();
