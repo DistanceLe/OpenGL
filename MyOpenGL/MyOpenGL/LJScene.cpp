@@ -235,20 +235,36 @@ void EnableLighting(){
     
     //启用一盏灯， 0~7
     glEnable(GL_LIGHT0);
+    
+    glEnable(GL_CULL_FACE);
+    
     //齐次坐标，(x, y, z, w)  -> (x/w, y/w, z/w)  0表示无穷远
-    float lightPos[]={0.0, 0.0, 1.0, 0.0};
+    float lightPos[]={0.0, 1.0, 0.0, 0.0};
     //表示方向光源，平行光，无穷远
     glLightfv(GL_LIGHT0, GL_POSITION, lightPos);
     
     
     float whiteColor[] = {1.0, 1.0, 1.0, 1.0};
     float ambientMat[] = {0.07, 0.07, 0.07, 1.0};
-    //设置光的颜色
+    float diffuseMat[] = {0.4, 0.4, 0.4, 1.0};//漫反射
+    float specularMat[] = {0.9, 0.9, 0.9, 1.0};//镜面反射
+    float blackColor[] = {0.0, 0.0, 0.0, 1.0};
+    
+    
+    
+    //设置环境光的颜色
     glLightfv(GL_LIGHT0, GL_AMBIENT, whiteColor);
     //设置物体的放射系数
-    glMaterialfv(GL_LIGHT0, GL_AMBIENT, ambientMat);
+    glMaterialfv(GL_FRONT, GL_AMBIENT, ambientMat);
+    
+    //设置漫反射
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, whiteColor);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuseMat);
     
     
+    //设置镜面反射
+    glLightfv(GL_LIGHT0, GL_SPECULAR, whiteColor);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, specularMat);
     
     
     

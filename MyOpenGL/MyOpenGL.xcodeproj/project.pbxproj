@@ -14,6 +14,8 @@
 		6AA1211E1F4B2FF300C071CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA1211C1F4B2FF300C071CD /* Main.storyboard */; };
 		6AA121271F4B309B00C071CD /* LJOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6AA121261F4B309B00C071CD /* LJOpenGLView.mm */; };
 		6AA1212B1F4B33BC00C071CD /* LJScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1212A1F4B33BC00C071CD /* LJScene.cpp */; };
+		6AAF11C71F4DDDF300E8968B /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 6AAF11C61F4DDDF300E8968B /* Resource */; };
+		6AAF11CA1F4DDE0E00E8968B /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF11C81F4DDE0E00E8968B /* utils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		6AA121281F4B312C00C071CD /* LJGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJGL.h; sourceTree = "<group>"; };
 		6AA121291F4B337500C071CD /* LJScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJScene.h; sourceTree = "<group>"; };
 		6AA1212A1F4B33BC00C071CD /* LJScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LJScene.cpp; sourceTree = "<group>"; };
+		6AAF11C61F4DDDF300E8968B /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
+		6AAF11C81F4DDE0E00E8968B /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
+		6AAF11C91F4DDE0E00E8968B /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		6AA121101F4B2FF300C071CD /* MyOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				6AAF11C61F4DDDF300E8968B /* Resource */,
 				6AA121111F4B2FF300C071CD /* AppDelegate.h */,
 				6AA121121F4B2FF300C071CD /* AppDelegate.m */,
 				6AA121171F4B2FF300C071CD /* ViewController.h */,
@@ -72,6 +78,8 @@
 				6AA121281F4B312C00C071CD /* LJGL.h */,
 				6AA121291F4B337500C071CD /* LJScene.h */,
 				6AA1212A1F4B33BC00C071CD /* LJScene.cpp */,
+				6AAF11C91F4DDE0E00E8968B /* utils.h */,
+				6AAF11C81F4DDE0E00E8968B /* utils.cpp */,
 				6AA1211A1F4B2FF300C071CD /* Assets.xcassets */,
 				6AA1211C1F4B2FF300C071CD /* Main.storyboard */,
 				6AA1211F1F4B2FF300C071CD /* Info.plist */,
@@ -147,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AAF11C71F4DDDF300E8968B /* Resource in Resources */,
 				6AA1211B1F4B2FF300C071CD /* Assets.xcassets in Resources */,
 				6AA1211E1F4B2FF300C071CD /* Main.storyboard in Resources */,
 			);
@@ -162,6 +171,7 @@
 				6AA121191F4B2FF300C071CD /* ViewController.m in Sources */,
 				6AA121161F4B2FF300C071CD /* main.m in Sources */,
 				6AA121131F4B2FF300C071CD /* AppDelegate.m in Sources */,
+				6AAF11CA1F4DDE0E00E8968B /* utils.cpp in Sources */,
 				6AA1212B1F4B33BC00C071CD /* LJScene.cpp in Sources */,
 				6AA121271F4B309B00C071CD /* LJOpenGLView.mm in Sources */,
 			);

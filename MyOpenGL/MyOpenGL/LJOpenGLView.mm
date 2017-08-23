@@ -8,6 +8,23 @@
 
 #import "LJOpenGLView.h"
 #include "LJScene.h"
+#include "utils.h"
+
+unsigned char* LoadFileContent(const char* path, int& filesize){
+    
+    unsigned char* fileContent = nullptr;
+    filesize = 0;
+    NSString* imagePath = [[NSBundle mainBundle]pathForResource:[NSString stringWithUTF8String:path] ofType:nil];
+    NSData* data = [NSData dataWithContentsOfFile:imagePath];
+    if (data.length>0) {
+        filesize = (int)data.length;
+        fileContent = new unsigned char[filesize+1];
+        memcpy(fileContent, [data bytes], filesize);
+        fileContent[filesize] = '\0';
+    }
+    return fileContent;
+}
+
 
 
 @implementation LJOpenGLView
