@@ -10,6 +10,7 @@
 
 void Init(){
     
+    
     //设置矩阵 模式 投射模式
     glMatrixMode(GL_PROJECTION);
     
