@@ -7,6 +7,9 @@
 //
 
 #include "LJScene.h"
+#include "utils.h"
+
+GLuint texture;
 
 void Init(){
     
@@ -21,6 +24,10 @@ void Init(){
     //模型视图
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
+    
+    
+    /**  图片纹理 */
+    texture = CreateTexture2DFromBMP("Resource/test.bmp");
 }
 
 /**  绘制 线条 */
@@ -246,7 +253,7 @@ void EnableLighting(){
     
     
     float whiteColor[] = {1.0, 1.0, 1.0, 1.0};
-    float ambientMat[] = {0.07, 0.07, 0.07, 1.0};
+    float ambientMat[] = {0.07, 0.07, 0.07, 1.0};//环境光
     float diffuseMat[] = {0.4, 0.4, 0.4, 1.0};//漫反射
     float specularMat[] = {0.9, 0.9, 0.9, 1.0};//镜面反射
     float blackColor[] = {0.0, 0.0, 0.0, 1.0};
@@ -268,11 +275,53 @@ void EnableLighting(){
     glMaterialfv(GL_FRONT, GL_SPECULAR, specularMat);
     
     
-    
     DrawModel();
-    
-    
 }
+
+
+void DrawTexture(){
+    glClearColor(0.1f, 0.4f, 0.8f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    /**  深度缓冲区 */
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_DEPTH_TEST);
+    
+    
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glBegin(GL_QUADS);//四边形
+    
+//    glColor4ub(0, 0, 0, 255);
+    
+    glTexCoord2f(0.0f, 0.0f);
+    glVertex3f(-0.1f, -0.1f, -0.4f);
+    
+    glTexCoord2f(2.0f, 0.0f);
+    glVertex3f(0.1f, -0.1f, -0.4f);
+    
+    glTexCoord2f(2.0f, 2.0f);
+    glVertex3f(0.1f, 0.1f, -0.4f);
+    
+    glTexCoord2f(0.0f, 2.0f);
+    glVertex3f(-0.1f, 0.1f, -0.4f);
+    
+    glEnd();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

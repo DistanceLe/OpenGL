@@ -16,7 +16,8 @@ unsigned char* LoadFileContent(const char* path, int& filesize){
     filesize = 0;
     NSString* imagePath = [[NSBundle mainBundle]pathForResource:[NSString stringWithUTF8String:path] ofType:nil];
     NSData* data = [NSData dataWithContentsOfFile:imagePath];
-    if (data.length>0) {
+    
+    if (data.length>0) {//最末尾添加一个 '\0', 代码更健壮
         filesize = (int)data.length;
         fileContent = new unsigned char[filesize+1];
         memcpy(fileContent, [data bytes], filesize);
@@ -24,8 +25,6 @@ unsigned char* LoadFileContent(const char* path, int& filesize){
     }
     return fileContent;
 }
-
-
 
 @implementation LJOpenGLView
 
@@ -54,7 +53,9 @@ unsigned char* LoadFileContent(const char* path, int& filesize){
 //    DrawLine();
     
 //    PushAndPop();
-    EnableLighting();
+//    EnableLighting();
+    
+    DrawTexture();
     
     glFlush();
 }

@@ -26,3 +26,5 @@ void DrawLine();
 void PushAndPop();
 
 void EnableLighting();
+
+void DrawTexture();
