@@ -10,6 +10,7 @@
 #include "LJScene.h"
 #include "utils.h"
 
+/**  加载图片文件 */
 unsigned char* LoadFileContent(const char* path, int& filesize){
     
     unsigned char* fileContent = nullptr;
@@ -55,7 +56,8 @@ unsigned char* LoadFileContent(const char* path, int& filesize){
 //    PushAndPop();
 //    EnableLighting();
     
-    DrawTexture();
+//    DrawTexture();
+    DrawSkybox();
     
     glFlush();
 }

@@ -8,6 +8,11 @@
 
 #include "LJScene.h"
 #include "utils.h"
+#include "skybox.hpp"
+#include "model.hpp"
+
+Skybox skybox;
+Model model;
 
 GLuint texture;
 
@@ -21,6 +26,7 @@ void Init(){
     //垂直方向上的视角， 画布宽与高的比， 最近可以看到的距离， 最远可以看到的距离
     gluPerspective(50.f, 800.0f/600.0f, 0.1f, 1000.0f);
     
+    
     //模型视图
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -28,7 +34,39 @@ void Init(){
     
     /**  图片纹理 */
     texture = CreateTexture2DFromBMP("Resource/test.bmp");
+    
+    /**  天空盒 */
+    skybox.Init("Resource/");
+    
+    /**  模型 */
+    model.Init("Resource/Quad.obj");
 }
+
+
+/**  天空盒 */
+void DrawSkybox(){
+    glClearColor(0.0, 0.0, 0.0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_DEPTH_TEST);
+    
+    skybox.Draw();
+    
+    glBegin(GL_QUADS);
+    
+    glColor4ub(0, 50, 200, 255);
+    
+    glVertex3f(-0.1, -0.1, -0.6);
+    glVertex3f(0.1, -0.1, -0.6);
+    glVertex3f(0.1, 0.1, -0.6);
+    glVertex3f(-0.1, 0.1, -0.6);
+    
+    glEnd();
+}
+
+
+
+
+
 
 /**  绘制 线条 */
 void DrawLine(){

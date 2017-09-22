@@ -28,3 +28,4 @@ void PushAndPop();
 void EnableLighting();
 
 void DrawTexture();
+void DrawSkybox();

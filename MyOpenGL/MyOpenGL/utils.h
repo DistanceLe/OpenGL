@@ -29,3 +29,6 @@ GLuint CreateTexture2D(unsigned char* pixelData, int width, int height, GLenum t
 
 /**  根据位图创建纹理对象 */
 GLuint CreateTexture2DFromBMP(const char* bmpPath);
+
+/**  创建 显示列表 */
+GLuint CreateDisplayList(std::function<void()>foo);

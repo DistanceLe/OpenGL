@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5496BD1F734F7E009757E0 /* skybox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A5496BB1F734F7E009757E0 /* skybox.cpp */; };
+		2AB3EF2F1F73CAFB00547E12 /* model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3EF2D1F73CAFB00547E12 /* model.cpp */; };
 		6AA121131F4B2FF300C071CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA121121F4B2FF300C071CD /* AppDelegate.m */; };
 		6AA121161F4B2FF300C071CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA121151F4B2FF300C071CD /* main.m */; };
 		6AA121191F4B2FF300C071CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA121181F4B2FF300C071CD /* ViewController.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A5496BB1F734F7E009757E0 /* skybox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = skybox.cpp; sourceTree = "<group>"; };
+		2A5496BC1F734F7E009757E0 /* skybox.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = skybox.hpp; sourceTree = "<group>"; };
+		2AB3EF2D1F73CAFB00547E12 /* model.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = model.cpp; sourceTree = "<group>"; };
+		2AB3EF2E1F73CAFB00547E12 /* model.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = model.hpp; sourceTree = "<group>"; };
 		6AA1210E1F4B2FF300C071CD /* MyOpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyOpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA121111F4B2FF300C071CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6AA121121F4B2FF300C071CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +86,10 @@
 				6AA1212A1F4B33BC00C071CD /* LJScene.cpp */,
 				6AAF11C91F4DDE0E00E8968B /* utils.h */,
 				6AAF11C81F4DDE0E00E8968B /* utils.cpp */,
+				2A5496BC1F734F7E009757E0 /* skybox.hpp */,
+				2A5496BB1F734F7E009757E0 /* skybox.cpp */,
+				2AB3EF2E1F73CAFB00547E12 /* model.hpp */,
+				2AB3EF2D1F73CAFB00547E12 /* model.cpp */,
 				6AA1211A1F4B2FF300C071CD /* Assets.xcassets */,
 				6AA1211C1F4B2FF300C071CD /* Main.storyboard */,
 				6AA1211F1F4B2FF300C071CD /* Info.plist */,
@@ -168,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5496BD1F734F7E009757E0 /* skybox.cpp in Sources */,
 				6AA121191F4B2FF300C071CD /* ViewController.m in Sources */,
 				6AA121161F4B2FF300C071CD /* main.m in Sources */,
+				2AB3EF2F1F73CAFB00547E12 /* model.cpp in Sources */,
 				6AA121131F4B2FF300C071CD /* AppDelegate.m in Sources */,
 				6AAF11CA1F4DDE0E00E8968B /* utils.cpp in Sources */,
 				6AA1212B1F4B33BC00C071CD /* LJScene.cpp in Sources */,
@@ -232,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -274,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -288,7 +300,7 @@
 				DEVELOPMENT_TEAM = KKHXU36BGT;
 				INFOPLIST_FILE = MyOpenGL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = LJ.MyOpenGL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -302,7 +314,7 @@
 				DEVELOPMENT_TEAM = KKHXU36BGT;
 				INFOPLIST_FILE = MyOpenGL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = LJ.MyOpenGL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

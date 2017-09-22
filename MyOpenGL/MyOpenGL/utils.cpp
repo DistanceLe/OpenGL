@@ -75,7 +75,15 @@ GLuint CreateTexture2DFromBMP(const char* bmpPath){
     return texture;
 }
 
-
+/**  创建 显示列表 */
+GLuint CreateDisplayList(std::function<void()>foo){
+    
+    GLuint displayList = glGenLists(1);
+    glNewList(displayList, GL_COMPILE);
+    foo();
+    glEndList();
+    return displayList;
+}
 
 
 
