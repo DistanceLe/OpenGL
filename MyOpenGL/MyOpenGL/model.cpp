@@ -135,6 +135,22 @@ void Model::Init(const char *modelPath){
             }
         }
     }
+    
+    mIndexCount = (int)indexes.size();
+    mIndexes = new unsigned short(mIndexCount);
+    for (int i = 0; i<mIndexCount; i++) {
+        mIndexes[i] = indexes[i];
+    }
+    
+    //唯一的点的个数
+    int vertexCount = (int)vertexes.size();
+    mVertexes = new VertexData[vertexCount];
+    for (int i = 0; i<vertexCount; i++) {
+        memcpy(mVertexes[i].position, positions[vertexes[i].posIndex-i].v, sizeof(float)*3);
+        memcpy(mVertexes[i].texcoord, texcoords[vertexes[i].texcoordIndex].v, sizeof(float)*2);
+        memcpy(mVertexes[i].normal, normals[vertexes[i].normalIndex].v, sizeof(float)*3);
+    }
+    
     delete fileContent;
     /**  每个keyword的意思：
      "vt 1.000000 0.000000"这句"vt"代表点的纹理贴图坐标。
@@ -145,5 +161,42 @@ void Model::Init(const char *modelPath){
      格式："f 顶点索引v/纹理uv点索引vt/法线索引vn"。
      "g pCube1"表示组。 */
     
-    
 }
+
+/**  绘制模型 */
+void Model::Draw(){
+    glPushMatrix();
+    glTranslated(0, 0, -2.0);
+    glBegin(GL_TRIANGLES);
+    for (int i = 0; i<mIndexCount; i++) {
+        glTexCoord2fv(mVertexes[mIndexes[i]].texcoord);
+        glNormal3fv(mVertexes[mIndexes[i]].normal);
+        glVertex3fv(mVertexes[mIndexes[i]].position);
+    }
+    glEnd();
+    glPopMatrix();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

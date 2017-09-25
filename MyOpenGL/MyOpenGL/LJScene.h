@@ -29,3 +29,4 @@ void EnableLighting();
 
 void DrawTexture();
 void DrawSkybox();
+void DrawGLModel();

@@ -51,19 +51,22 @@ void DrawSkybox(){
     
     skybox.Draw();
     
-    glBegin(GL_QUADS);
-    
     glColor4ub(0, 50, 200, 255);
-    
+    glBegin(GL_QUADS);
+
+
+
     glVertex3f(-0.1, -0.1, -0.6);
     glVertex3f(0.1, -0.1, -0.6);
     glVertex3f(0.1, 0.1, -0.6);
     glVertex3f(-0.1, 0.1, -0.6);
-    
+
     glEnd();
 }
 
-
+void DrawGLModel(){
+    model.Draw();
+}
 
 
 
