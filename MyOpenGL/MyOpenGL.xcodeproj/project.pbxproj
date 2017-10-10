@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A5496BD1F734F7E009757E0 /* skybox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A5496BB1F734F7E009757E0 /* skybox.cpp */; };
+		2A7ED0B31F7C92FD00496CBE /* ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A7ED0B11F7C92FD00496CBE /* ground.cpp */; };
 		2AB3EF2F1F73CAFB00547E12 /* model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3EF2D1F73CAFB00547E12 /* model.cpp */; };
 		6AA121131F4B2FF300C071CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA121121F4B2FF300C071CD /* AppDelegate.m */; };
 		6AA121161F4B2FF300C071CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA121151F4B2FF300C071CD /* main.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		2A5496BB1F734F7E009757E0 /* skybox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = skybox.cpp; sourceTree = "<group>"; };
 		2A5496BC1F734F7E009757E0 /* skybox.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = skybox.hpp; sourceTree = "<group>"; };
+		2A7ED0B11F7C92FD00496CBE /* ground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ground.cpp; sourceTree = "<group>"; };
+		2A7ED0B21F7C92FD00496CBE /* ground.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ground.hpp; sourceTree = "<group>"; };
 		2AB3EF2D1F73CAFB00547E12 /* model.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = model.cpp; sourceTree = "<group>"; };
 		2AB3EF2E1F73CAFB00547E12 /* model.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = model.hpp; sourceTree = "<group>"; };
 		6AA1210E1F4B2FF300C071CD /* MyOpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyOpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +93,8 @@
 				2A5496BB1F734F7E009757E0 /* skybox.cpp */,
 				2AB3EF2E1F73CAFB00547E12 /* model.hpp */,
 				2AB3EF2D1F73CAFB00547E12 /* model.cpp */,
+				2A7ED0B21F7C92FD00496CBE /* ground.hpp */,
+				2A7ED0B11F7C92FD00496CBE /* ground.cpp */,
 				6AA1211A1F4B2FF300C071CD /* Assets.xcassets */,
 				6AA1211C1F4B2FF300C071CD /* Main.storyboard */,
 				6AA1211F1F4B2FF300C071CD /* Info.plist */,
@@ -178,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7ED0B31F7C92FD00496CBE /* ground.cpp in Sources */,
 				2A5496BD1F734F7E009757E0 /* skybox.cpp in Sources */,
 				6AA121191F4B2FF300C071CD /* ViewController.m in Sources */,
 				6AA121161F4B2FF300C071CD /* main.m in Sources */,

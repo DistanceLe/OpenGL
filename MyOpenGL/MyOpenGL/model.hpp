@@ -28,6 +28,7 @@ class Model{
     unsigned short* mIndexes;//索引指针
     int mIndexCount;//多少个索引
 public:
+    GLuint mTexture;
     Model();
     void Init(const char* modelPath);
     void Draw();

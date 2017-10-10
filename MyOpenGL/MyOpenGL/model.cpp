@@ -165,8 +165,14 @@ void Model::Init(const char *modelPath){
 
 /**  绘制模型 */
 void Model::Draw(){
+    
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, mTexture);
+    glEnable(GL_DEPTH_TEST);
+    
+    
     glPushMatrix();
-    glTranslated(0, 0, -2.0);
+    glTranslated(0, 0, -5.0);
     glBegin(GL_TRIANGLES);
     for (int i = 0; i<mIndexCount; i++) {
         glTexCoord2fv(mVertexes[mIndexes[i]].texcoord);

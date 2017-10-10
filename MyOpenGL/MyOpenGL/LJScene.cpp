@@ -27,6 +27,8 @@ void Init(){
     gluPerspective(50.f, 800.0f/600.0f, 0.1f, 1000.0f);
     
     
+    
+    
     //模型视图
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -40,6 +42,7 @@ void Init(){
     
     /**  模型 */
     model.Init("Resource/Quad.obj");
+    model.mTexture = CreateTexture2DFromBMP("Resource/test.bmp");
 }
 
 
