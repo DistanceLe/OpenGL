@@ -57,9 +57,10 @@ unsigned char* LoadFileContent(const char* path, int& filesize){
 //    EnableLighting();
     
 //    DrawTexture();
-    DrawSkybox();
-    DrawGLModel();
-    glFlush();
+//    DrawSkybox();
+//    DrawGLModel();
+//    glFlush();
+    DrawGround();
 }
 
 

@@ -10,9 +10,11 @@
 #include "utils.h"
 #include "skybox.hpp"
 #include "model.hpp"
+#include "ground.hpp"
 
 Skybox skybox;
 Model model;
+Ground ground;
 
 GLuint texture;
 
@@ -32,19 +34,26 @@ void Init(){
     //模型视图
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
+//
     
+//
+//    /**  图片纹理 */
+//    texture = CreateTexture2DFromBMP("Resource/test.bmp");
+//
+//    /**  天空盒 */
+//    skybox.Init("Resource/");
+//
+//    /**  模型 */
+//    model.Init("Resource/Quad.obj");
+//    model.mTexture = CreateTexture2DFromBMP("Resource/test.bmp");
     
-    /**  图片纹理 */
-    texture = CreateTexture2DFromBMP("Resource/test.bmp");
-    
-    /**  天空盒 */
-    skybox.Init("Resource/");
-    
-    /**  模型 */
-    model.Init("Resource/Quad.obj");
-    model.mTexture = CreateTexture2DFromBMP("Resource/test.bmp");
 }
 
+/**  地面 */
+void DrawGround(){
+    /**  地面 */
+    ground.Draw();
+}
 
 /**  天空盒 */
 void DrawSkybox(){
